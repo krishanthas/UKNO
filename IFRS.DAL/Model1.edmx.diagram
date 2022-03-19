@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fa833aa728a34ae8b342f12b8895c203" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="DataModel.CashFlow" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DataModel.Customer" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DataModel.User" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DataModel.Remark" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="DataModel.Account" Width="3" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="DataModel.Question" Width="1.5" PointX="6.5" PointY="0.875" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

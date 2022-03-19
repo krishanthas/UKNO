@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFRS.DAL", "IFRS.DAL\IFRS.DAL.csproj", "{228621F2-763F-44DA-B558-8EE00897739C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFRS.WEB", "IFRS.WEB\IFRS.WEB.csproj", "{6DA1F563-ED55-4CF5-94EE-7DCBEA9DD0A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IFRS.DEM", "IFRS.DEM\IFRS.DEM.csproj", "{AE31EA85-70A4-4D97-9253-680FD2372756}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DLLS", "DLLS", "{8E0A3554-3CBC-4C60-A432-BE8E68F8C61E}"
+	ProjectSection(SolutionItems) = preProject
+		DLLS\Telerik.Documents.SpreadsheetStreaming.dll = DLLS\Telerik.Documents.SpreadsheetStreaming.dll
+		DLLS\Telerik.Web.Spreadsheet.dll = DLLS\Telerik.Web.Spreadsheet.dll
+		DLLS\Telerik.Web.UI.dll = DLLS\Telerik.Web.UI.dll
+		DLLS\Telerik.Web.UI.Skins.dll = DLLS\Telerik.Web.UI.Skins.dll
+		DLLS\Telerik.Windows.Documents.Core.dll = DLLS\Telerik.Windows.Documents.Core.dll
+		DLLS\Telerik.Windows.Documents.Fixed.dll = DLLS\Telerik.Windows.Documents.Fixed.dll
+		DLLS\Telerik.Windows.Documents.Flow.dll = DLLS\Telerik.Windows.Documents.Flow.dll
+		DLLS\Telerik.Windows.Documents.Spreadsheet.dll = DLLS\Telerik.Windows.Documents.Spreadsheet.dll
+		DLLS\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll = DLLS\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll
+		DLLS\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll = DLLS\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll
+		DLLS\Telerik.Windows.Zip.dll = DLLS\Telerik.Windows.Zip.dll
+		DLLS\Telerik.Windows.Zip.Extensions.dll = DLLS\Telerik.Windows.Zip.Extensions.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{228621F2-763F-44DA-B558-8EE00897739C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{228621F2-763F-44DA-B558-8EE00897739C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{228621F2-763F-44DA-B558-8EE00897739C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{228621F2-763F-44DA-B558-8EE00897739C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DA1F563-ED55-4CF5-94EE-7DCBEA9DD0A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DA1F563-ED55-4CF5-94EE-7DCBEA9DD0A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DA1F563-ED55-4CF5-94EE-7DCBEA9DD0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DA1F563-ED55-4CF5-94EE-7DCBEA9DD0A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE31EA85-70A4-4D97-9253-680FD2372756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE31EA85-70A4-4D97-9253-680FD2372756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE31EA85-70A4-4D97-9253-680FD2372756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE31EA85-70A4-4D97-9253-680FD2372756}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C7262F5-B914-4FF0-A391-28B1A9277521}
+	EndGlobalSection
+EndGlobal

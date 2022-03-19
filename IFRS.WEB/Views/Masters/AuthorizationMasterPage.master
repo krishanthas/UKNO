@@ -1,0 +1,4 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AuthorizationMasterPage.master.cs" Inherits="IFRS.WEB.Views.Masters.UnauthorizedMasterPage" %>
+<asp:Content ID="Content" ContentPlaceHolderID="MainContent" runat="server">
+    <asp:ContentPlaceHolder ID="AuthorizationMasterPageContent" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

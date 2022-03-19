@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DataModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="APP_IFRS_ACCOUNTS">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="varchar2" MaxLength="128" Nullable="false" />
+          <Property Name="SolId" Type="varchar2" MaxLength="128" />
+          <Property Name="AsAtDate" Type="date" />
+          <Property Name="Name" Type="varchar2" MaxLength="128" />
+          <Property Name="Product" Type="varchar2" MaxLength="128" />
+          <Property Name="GrantedAmountLKR" Type="number" Precision="18" Scale="4" />
+          <Property Name="CapitalLKR" Type="number" Precision="18" Scale="4" />
+          <Property Name="InterestOSLKR" Type="number" Precision="18" Scale="4" />
+          <Property Name="GrantedDate" Type="date" />
+          <Property Name="Currency" Type="varchar2" MaxLength="128" />
+          <Property Name="ImpairmentStatus" Type="varchar2" MaxLength="128" />
+          <Property Name="ImpairmentAmount" Type="number" Precision="18" Scale="4" />
+          <Property Name="PresentValue" Type="number" Precision="18" Scale="4" />
+          <Property Name="Classification" Type="varchar2" MaxLength="128" />
+          <Property Name="Period" Type="number" Precision="38" Scale="0" />
+          <Property Name="AmortizedAmount" Type="number" Precision="18" Scale="4" />
+          <Property Name="InterestRate" Type="number" Precision="18" Scale="4" />
+          <Property Name="AppliedInterestRate" Type="number" Precision="18" Scale="4" />
+          <Property Name="TotalCashFlowAmount" Type="number" Precision="18" Scale="4" />
+          <Property Name="DelFlag" Type="varchar2" MaxLength="128" />
+          <Property Name="CustomerId" Type="varchar2" MaxLength="128" />
+          <Property Name="FreeText_1" Type="varchar2" MaxLength="200" />
+          <Property Name="FreeText_2" Type="varchar2" MaxLength="200" />
+          <Property Name="FreeText_3" Type="varchar2" MaxLength="200" />
+          <Property Name="FreeDate_1" Type="date" />
+          <Property Name="FreeDate_2" Type="date" />
+          <Property Name="FreeNo_1" Type="number" Precision="38" Scale="0" />
+          <Property Name="FreeNo_2" Type="number" Precision="38" Scale="0" />
+          <Property Name="RcReUser" Type="varchar2" MaxLength="50" />
+          <Property Name="RcReTime" Type="timestamp" Precision="6" />
+          <Property Name="LchgUser" Type="varchar2" MaxLength="50" />
+          <Property Name="LchgTime" Type="timestamp" Precision="6" />
+          <Property Name="Currency_Rate" Type="number" Precision="18" Scale="4" />
+        </EntityType>
+        <EntityType Name="APP_IFRS_CASHFLOWS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="CustomerId" Type="varchar2" MaxLength="128" />
+          <Property Name="AccountNumber" Type="varchar2" MaxLength="128" />
+          <Property Name="SolId" Type="varchar2" MaxLength="128" />
+          <Property Name="AccountName" Type="varchar2" MaxLength="128" />
+          <Property Name="InterestRate" Type="number" Precision="18" Scale="4" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Amount" Type="number" Precision="18" Scale="4" />
+          <Property Name="PresentValue" Type="number" Precision="18" Scale="4" />
+          <Property Name="Status" Type="varchar2" MaxLength="128" />
+          <Property Name="EntryUserId" Type="varchar2" MaxLength="128" />
+          <Property Name="EntryTime" Type="date" />
+          <Property Name="AsAtDate" Type="date" />
+          <Property Name="DelFlag" Type="varchar2" MaxLength="128" />
+          <Property Name="RcReUser" Type="varchar2" MaxLength="50" />
+          <Property Name="RcReTime" Type="timestamp" Precision="6" />
+          <Property Name="LchgUser" Type="varchar2" MaxLength="50" />
+          <Property Name="LchgTime" Type="timestamp" Precision="6" />
+          <Property Name="FreeText_1" Type="varchar2" MaxLength="200" />
+          <Property Name="FreeText_2" Type="varchar2" MaxLength="200" />
+          <Property Name="FreeText_3" Type="varchar2" MaxLength="200" />
+          <Property Name="FreeDate_1" Type="date" />
+          <Property Name="FreeDate_2" Type="date" />
+          <Property Name="FreeNo_1" Type="number" Precision="38" Scale="0" />
+          <Property Name="FreeNo_2" Type="number" Precision="38" Scale="0" />
+        </EntityType>
+        <EntityType Name="APP_IFRS_CUSTOMERS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar2" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="varchar2" MaxLength="128" />
+          <Property Name="BranchId" Type="varchar2" MaxLength="128" />
+          <Property Name="BranchCode" Type="varchar2" MaxLength="128" />
+          <Property Name="BrancType" Type="varchar2" MaxLength="128" />
+          <Property Name="CapitalOSLKR" Type="number" Precision="18" Scale="4" />
+          <Property Name="StatusCode" Type="varchar2" MaxLength="128" />
+          <Property Name="TotalPresentValue" Type="number" Precision="18" Scale="4" />
+          <Property Name="TotalAmortizedAmount" Type="number" Precision="18" Scale="4" />
+          <Property Name="TotalCashFlowsAmount" Type="number" Precision="18" Scale="4" />
+          <Property Name="TotalImpairmentAmount" Type="number" Precision="18" Scale="4" />
+          <Property Name="ImpairmentStatus" Type="varchar2" MaxLength="128" />
+          <Property Name="EntryUserId" Type="varchar2" MaxLength="128" />
+          <Property Name="AsAtDate" Type="date" />
+          <Property Name="DelFlag" Type="varchar2" MaxLength="128" />
+          <Property Name="RelationshipManager" Type="varchar2" MaxLength="128" />
+          <Property Name="Verify_1" Type="varchar2" MaxLength="128" />
+          <Property Name="Verify_2" Type="varchar2" MaxLength="128" />
+          <Property Name="Verify_3" Type="varchar2" MaxLength="128" />
+          <Property Name="Verify_4" Type="varchar2" MaxLength="128" />
+          <Property Name="q1" Type="varchar2" MaxLength="128" />
+          <Property Name="q2" Type="varchar2" MaxLength="128" />
+          <Property Name="q3" Type="varchar2" MaxLength="128" />
+          <Property Name="q4" Type="varchar2" MaxLength="128" />
+          <Property Name="q5" Type="varchar2" MaxLength="128" />
+          <Property Name="q6" Type="varchar2" MaxLength="128" />
+          <Property Name="q7" Type="varchar2" MaxLength="128" />
+          <Property Name="q8" Type="varchar2" MaxLength="128" />
+          <Property Name="q9" Type="varchar2" MaxLength="128" />
+          <Property Name="q10" Type="varchar2" MaxLength="128" />
+          <Property Name="q11" Type="varchar2" MaxLength="128" />
+          <Property Name="q12" Type="varchar2" MaxLength="128" />
+          <Property Name="q13" Type="varchar2" MaxLength="128" />
+          <Property Name="q14" Type="varchar2" MaxLength="128" />
+          <Property Name="q15" Type="varchar2" MaxLength="128" />
+          <Property Name="q16" Type="varchar2" MaxLength="128" />
+          <Property Name="q17" Type="varchar2" MaxLength="128" />
+          <Property Name="q18" Type="varchar2" MaxLength="128" />
+          <Property Name="q19" Type="varchar2" MaxLength="128" />
+          <Property Name="q20" Type="varchar2" MaxLength="128" />
+          <Property Name="q21" Type="varchar2" MaxLength="128" />
+          <Property Name="q22" Type="varchar2" MaxLength="128" />
+          <Property Name="q23" Type="varchar2" MaxLength="128" />
+          <Property Name="q24" Type="varchar2" MaxLength="128" />
+          <Property Name="q25" Type="varchar2" MaxLength="128" />
+          <Property Name="q26" Type="varchar2" MaxLength="128" />
+          <Property Name="q27" Type="varchar2" MaxLength="128" />
+          <Property Name="q28" Type="varchar2" MaxLength="128" />
+          <Property Name="q29" Type="varchar2" MaxLength="128" />
+          <Property Name="q30" Type="varchar2" MaxLength="128" />
+          <Property Name="StatusHistory" Type="varchar2" MaxLength="2048" />
+          <Property Name="RcReUser" Type="varchar2" MaxLength="50" />
+          <Property Name="RcReTime" Type="timestamp" Precision="6" />
+          <Property Name="LchgUser" Type="varchar2" MaxLength="50" />
+          <Property Name="LchgTime" Type="timestamp" Precision="6" />
+          <Property Name="VerifiedUser" Type="varchar2" MaxLength="50" />
+          <Property Name="VerifiedTime" Type="timestamp" Precision="6" />
+          <Property Name="FreeText_1" Type="varchar2" MaxLength="200" />
+          <Property Name="FreeText_2" Type="varchar2" MaxLength="200" />
+          <Property Name="FreeText_3" Type="varchar2" MaxLength="200" />
+          <Property Name="FreeDate_1" Type="date" />
+          <Property Name="FreeDate_2" Type="date" />
+          <Property Name="FreeNo_1" Type="number" Precision="38" Scale="0" />
+          <Property Name="FreeNo_2" Type="number" Precision="38" Scale="0" />
+          <Property Name="Npa_Pa" Type="varchar2" MaxLength="3" />
+          <Property Name="Mora_Status" Type="varchar2" MaxLength="3" />
+          <Property Name="Customer_Type" Type="varchar2" MaxLength="2" />
+          <Property Name="AnswerRemark" Type="varchar2" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="APP_IFRS_QUESTIONS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="Status" Type="varchar2" MaxLength="128" />
+          <Property Name="Text" Type="varchar2" MaxLength="1024" />
+          <Property Name="Answer" Type="varchar2" MaxLength="128" />
+          <Property Name="BI_Type" Type="varchar2" MaxLength="2" />
+          <Property Name="AsAtDate" Type="date" />
+          <Property Name="No" Type="number" Precision="38" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="APP_IFRS_REMARKS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+          <Property Name="AsAtDate" Type="date" />
+          <Property Name="CustomerId" Type="varchar2" MaxLength="128" />
+          <Property Name="Remarks" Type="varchar2" MaxLength="4000" />
+          <Property Name="DelFlag" Type="varchar2" MaxLength="128" />
+          <Property Name="RcReUser" Type="varchar2" MaxLength="50" />
+          <Property Name="RcReTime" Type="timestamp" Precision="6" />
+          <Property Name="LchgUser" Type="varchar2" MaxLength="50" />
+          <Property Name="LchgTime" Type="timestamp" Precision="6" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'APP.APP_IFRS_USERS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="APP_IFRS_USERS">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar2" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="varchar2" MaxLength="128" />
+          <Property Name="NameWithInitials" Type="varchar2" MaxLength="128" />
+          <Property Name="DepartmentId" Type="varchar2" MaxLength="128" />
+          <Property Name="DepartmentName" Type="varchar2" MaxLength="128" />
+          <Property Name="Email" Type="varchar2" MaxLength="128" />
+          <Property Name="ReportingId" Type="varchar2" MaxLength="128" />
+        </EntityType>
+        <EntityContainer Name="DataModelStoreContainer">
+          <EntitySet Name="APP_IFRS_ACCOUNTS" EntityType="Self.APP_IFRS_ACCOUNTS" Schema="APP" store:Type="Tables" />
+          <EntitySet Name="APP_IFRS_CASHFLOWS" EntityType="Self.APP_IFRS_CASHFLOWS" Schema="APP" store:Type="Tables" />
+          <EntitySet Name="APP_IFRS_CUSTOMERS" EntityType="Self.APP_IFRS_CUSTOMERS" Schema="APP" store:Type="Tables" />
+          <EntitySet Name="APP_IFRS_QUESTIONS" EntityType="Self.APP_IFRS_QUESTIONS" Schema="APP" store:Type="Tables" />
+          <EntitySet Name="APP_IFRS_REMARKS" EntityType="Self.APP_IFRS_REMARKS" Schema="APP" store:Type="Tables" />
+          <EntitySet Name="APP_IFRS_USERS" EntityType="Self.APP_IFRS_USERS" store:Type="Tables" store:Schema="APP">
+            <DefiningQuery>SELECT 
+"APP_IFRS_USERS"."Id" AS "Id", 
+"APP_IFRS_USERS"."Name" AS "Name", 
+"APP_IFRS_USERS"."NameWithInitials" AS "NameWithInitials", 
+"APP_IFRS_USERS"."DepartmentId" AS "DepartmentId", 
+"APP_IFRS_USERS"."DepartmentName" AS "DepartmentName", 
+"APP_IFRS_USERS"."Email" AS "Email", 
+"APP_IFRS_USERS"."ReportingId" AS "ReportingId"
+FROM "APP"."APP_IFRS_USERS" "APP_IFRS_USERS"</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CashFlows" EntityType="DataModel.CashFlow" />
+          <EntitySet Name="Customers" EntityType="DataModel.Customer" />
+          <EntitySet Name="Users" EntityType="DataModel.User" />
+          <EntitySet Name="Remarks" EntityType="DataModel.Remark" />
+          <EntitySet Name="Accounts" EntityType="DataModel.Account" />
+          <EntitySet Name="Questions" EntityType="DataModel.Question" />
+        </EntityContainer>
+        <EntityType Name="CashFlow">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="CustomerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="AccountNumber" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="SolId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="AccountName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="InterestRate" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Date" Type="DateTime" />
+          <Property Name="Amount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="PresentValue" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Status" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="EntryUserId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="EntryTime" Type="DateTime" />
+          <Property Name="AsAtDate" Type="DateTime" />
+          <Property Name="DelFlag" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="FreeText_1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="FreeText_2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="FreeText_3" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="FreeDate_1" Type="DateTime" />
+          <Property Name="FreeDate_2" Type="DateTime" />
+          <Property Name="FreeNo_1" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="FreeNo_2" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="RcReUser" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="RcReTime" Type="DateTime" Precision="6" />
+          <Property Name="LchgUser" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="LchgTime" Type="DateTime" Precision="6" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="BranchId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="BranchCode" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="BrancType" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="CapitalOSLKR" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="StatusCode" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="TotalPresentValue" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="TotalAmortizedAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="TotalCashFlowsAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="TotalImpairmentAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="ImpairmentStatus" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="EntryUserId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="AsAtDate" Type="DateTime" />
+          <Property Name="DelFlag" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="RelationshipManager" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Verify_1" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Verify_2" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Verify_3" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Verify_4" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q1" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q2" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q3" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q4" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q5" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q6" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q7" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q8" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q9" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q10" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q11" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q12" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q13" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q14" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q15" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q16" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q17" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q18" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q19" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q20" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q21" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q22" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q23" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q24" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q25" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q26" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q27" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q28" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q29" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="q30" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="StatusHistory" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+          <Property Name="FreeText_1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="FreeText_2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="FreeText_3" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="FreeDate_1" Type="DateTime" />
+          <Property Name="FreeDate_2" Type="DateTime" />
+          <Property Name="FreeNo_1" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="FreeNo_2" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="RcReUser" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="RcReTime" Type="DateTime" Precision="6" />
+          <Property Name="VerifiedUser" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="VerifiedTime" Type="DateTime" Precision="6" />
+          <Property Name="LchgUser" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="LchgTime" Type="DateTime" Precision="6" />
+          <Property Name="Npa_Pa" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Mora_Status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="Customer_Type" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="AnswerRemark" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="NameWithInitials" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="DepartmentId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="DepartmentName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="ReportingId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Remark">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="AsAtDate" Type="DateTime" />
+          <Property Name="CustomerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Remarks" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="DelFlag" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="RcReUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RcReTime" Type="DateTime" Precision="6" />
+          <Property Name="LchgUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LchgTime" Type="DateTime" Precision="6" />
+        </EntityType>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="AccountNumber" />
+          </Key>
+          <Property Name="AccountNumber" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="SolId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="AsAtDate" Type="DateTime" />
+          <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Product" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="GrantedAmountLKR" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="CapitalLKR" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="InterestOSLKR" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="GrantedDate" Type="DateTime" />
+          <Property Name="Currency" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="ImpairmentStatus" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="ImpairmentAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="PresentValue" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Classification" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Period" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="AmortizedAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="InterestRate" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="AppliedInterestRate" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="TotalCashFlowAmount" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="DelFlag" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="FreeText_1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FreeText_2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FreeText_3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="FreeDate_1" Type="DateTime" />
+          <Property Name="FreeDate_2" Type="DateTime" />
+          <Property Name="FreeNo_1" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="FreeNo_2" Type="Decimal" Precision="38" Scale="0" />
+          <Property Name="RcReUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RcReTime" Type="DateTime" Precision="6" />
+          <Property Name="LchgUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LchgTime" Type="DateTime" Precision="6" />
+          <Property Name="Currency_Rate" Type="Decimal" Precision="18" Scale="4" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+          <Property Name="Status" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Text" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Name="Answer" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="BI_Type" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="AsAtDate" Type="DateTime" />
+          <Property Name="No" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="CashFlows">
+            <EntityTypeMapping TypeName="DataModel.CashFlow">
+              <MappingFragment StoreEntitySet="APP_IFRS_CASHFLOWS">
+                <ScalarProperty Name="LchgTime" ColumnName="LchgTime" />
+                <ScalarProperty Name="LchgUser" ColumnName="LchgUser" />
+                <ScalarProperty Name="RcReTime" ColumnName="RcReTime" />
+                <ScalarProperty Name="RcReUser" ColumnName="RcReUser" />
+                <ScalarProperty Name="FreeNo_2" ColumnName="FreeNo_2" />
+                <ScalarProperty Name="FreeNo_1" ColumnName="FreeNo_1" />
+                <ScalarProperty Name="FreeDate_2" ColumnName="FreeDate_2" />
+                <ScalarProperty Name="FreeDate_1" ColumnName="FreeDate_1" />
+                <ScalarProperty Name="FreeText_3" ColumnName="FreeText_3" />
+                <ScalarProperty Name="FreeText_2" ColumnName="FreeText_2" />
+                <ScalarProperty Name="FreeText_1" ColumnName="FreeText_1" />
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="AsAtDate" ColumnName="AsAtDate" />
+                <ScalarProperty Name="EntryTime" ColumnName="EntryTime" />
+                <ScalarProperty Name="EntryUserId" ColumnName="EntryUserId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PresentValue" ColumnName="PresentValue" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+                <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+                <ScalarProperty Name="SolId" ColumnName="SolId" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="DataModel.Customer">
+              <MappingFragment StoreEntitySet="APP_IFRS_CUSTOMERS">
+                <ScalarProperty Name="AnswerRemark" ColumnName="AnswerRemark" />
+                <ScalarProperty Name="Customer_Type" ColumnName="Customer_Type" />
+                <ScalarProperty Name="Mora_Status" ColumnName="Mora_Status" />
+                <ScalarProperty Name="Npa_Pa" ColumnName="Npa_Pa" />
+                <ScalarProperty Name="LchgTime" ColumnName="LchgTime" />
+                <ScalarProperty Name="LchgUser" ColumnName="LchgUser" />
+                <ScalarProperty Name="VerifiedTime" ColumnName="VerifiedTime" />
+                <ScalarProperty Name="VerifiedUser" ColumnName="VerifiedUser" />
+                <ScalarProperty Name="RcReTime" ColumnName="RcReTime" />
+                <ScalarProperty Name="RcReUser" ColumnName="RcReUser" />
+                <ScalarProperty Name="FreeNo_2" ColumnName="FreeNo_2" />
+                <ScalarProperty Name="FreeNo_1" ColumnName="FreeNo_1" />
+                <ScalarProperty Name="FreeDate_2" ColumnName="FreeDate_2" />
+                <ScalarProperty Name="FreeDate_1" ColumnName="FreeDate_1" />
+                <ScalarProperty Name="FreeText_3" ColumnName="FreeText_3" />
+                <ScalarProperty Name="FreeText_2" ColumnName="FreeText_2" />
+                <ScalarProperty Name="FreeText_1" ColumnName="FreeText_1" />
+                <ScalarProperty Name="StatusHistory" ColumnName="StatusHistory" />
+                <ScalarProperty Name="q30" ColumnName="q30" />
+                <ScalarProperty Name="q29" ColumnName="q29" />
+                <ScalarProperty Name="q28" ColumnName="q28" />
+                <ScalarProperty Name="q27" ColumnName="q27" />
+                <ScalarProperty Name="q26" ColumnName="q26" />
+                <ScalarProperty Name="q25" ColumnName="q25" />
+                <ScalarProperty Name="q24" ColumnName="q24" />
+                <ScalarProperty Name="q23" ColumnName="q23" />
+                <ScalarProperty Name="q22" ColumnName="q22" />
+                <ScalarProperty Name="q21" ColumnName="q21" />
+                <ScalarProperty Name="q20" ColumnName="q20" />
+                <ScalarProperty Name="q19" ColumnName="q19" />
+                <ScalarProperty Name="q18" ColumnName="q18" />
+                <ScalarProperty Name="q17" ColumnName="q17" />
+                <ScalarProperty Name="q16" ColumnName="q16" />
+                <ScalarProperty Name="q15" ColumnName="q15" />
+                <ScalarProperty Name="q14" ColumnName="q14" />
+                <ScalarProperty Name="q13" ColumnName="q13" />
+                <ScalarProperty Name="q12" ColumnName="q12" />
+                <ScalarProperty Name="q11" ColumnName="q11" />
+                <ScalarProperty Name="q10" ColumnName="q10" />
+                <ScalarProperty Name="q9" ColumnName="q9" />
+                <ScalarProperty Name="q8" ColumnName="q8" />
+                <ScalarProperty Name="q7" ColumnName="q7" />
+                <ScalarProperty Name="q6" ColumnName="q6" />
+                <ScalarProperty Name="q5" ColumnName="q5" />
+                <ScalarProperty Name="q4" ColumnName="q4" />
+                <ScalarProperty Name="q3" ColumnName="q3" />
+                <ScalarProperty Name="q2" ColumnName="q2" />
+                <ScalarProperty Name="q1" ColumnName="q1" />
+                <ScalarProperty Name="Verify_4" ColumnName="Verify_4" />
+                <ScalarProperty Name="Verify_3" ColumnName="Verify_3" />
+                <ScalarProperty Name="Verify_2" ColumnName="Verify_2" />
+                <ScalarProperty Name="Verify_1" ColumnName="Verify_1" />
+                <ScalarProperty Name="RelationshipManager" ColumnName="RelationshipManager" />
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="AsAtDate" ColumnName="AsAtDate" />
+                <ScalarProperty Name="EntryUserId" ColumnName="EntryUserId" />
+                <ScalarProperty Name="ImpairmentStatus" ColumnName="ImpairmentStatus" />
+                <ScalarProperty Name="TotalImpairmentAmount" ColumnName="TotalImpairmentAmount" />
+                <ScalarProperty Name="TotalCashFlowsAmount" ColumnName="TotalCashFlowsAmount" />
+                <ScalarProperty Name="TotalAmortizedAmount" ColumnName="TotalAmortizedAmount" />
+                <ScalarProperty Name="TotalPresentValue" ColumnName="TotalPresentValue" />
+                <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+                <ScalarProperty Name="CapitalOSLKR" ColumnName="CapitalOSLKR" />
+                <ScalarProperty Name="BrancType" ColumnName="BrancType" />
+                <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+                <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="DataModel.User">
+              <MappingFragment StoreEntitySet="APP_IFRS_USERS">
+                <ScalarProperty Name="ReportingId" ColumnName="ReportingId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="NameWithInitials" ColumnName="NameWithInitials" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Remarks">
+            <EntityTypeMapping TypeName="DataModel.Remark">
+              <MappingFragment StoreEntitySet="APP_IFRS_REMARKS">
+                <ScalarProperty Name="LchgTime" ColumnName="LchgTime" />
+                <ScalarProperty Name="LchgUser" ColumnName="LchgUser" />
+                <ScalarProperty Name="RcReTime" ColumnName="RcReTime" />
+                <ScalarProperty Name="RcReUser" ColumnName="RcReUser" />
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="AsAtDate" ColumnName="AsAtDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="DataModel.Account">
+              <MappingFragment StoreEntitySet="APP_IFRS_ACCOUNTS">
+                <ScalarProperty Name="Currency_Rate" ColumnName="Currency_Rate" />
+                <ScalarProperty Name="LchgTime" ColumnName="LchgTime" />
+                <ScalarProperty Name="LchgUser" ColumnName="LchgUser" />
+                <ScalarProperty Name="RcReTime" ColumnName="RcReTime" />
+                <ScalarProperty Name="RcReUser" ColumnName="RcReUser" />
+                <ScalarProperty Name="FreeNo_2" ColumnName="FreeNo_2" />
+                <ScalarProperty Name="FreeNo_1" ColumnName="FreeNo_1" />
+                <ScalarProperty Name="FreeDate_2" ColumnName="FreeDate_2" />
+                <ScalarProperty Name="FreeDate_1" ColumnName="FreeDate_1" />
+                <ScalarProperty Name="FreeText_3" ColumnName="FreeText_3" />
+                <ScalarProperty Name="FreeText_2" ColumnName="FreeText_2" />
+                <ScalarProperty Name="FreeText_1" ColumnName="FreeText_1" />
+                <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+                <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+                <ScalarProperty Name="TotalCashFlowAmount" ColumnName="TotalCashFlowAmount" />
+                <ScalarProperty Name="AppliedInterestRate" ColumnName="AppliedInterestRate" />
+                <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+                <ScalarProperty Name="AmortizedAmount" ColumnName="AmortizedAmount" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Classification" ColumnName="Classification" />
+                <ScalarProperty Name="PresentValue" ColumnName="PresentValue" />
+                <ScalarProperty Name="ImpairmentAmount" ColumnName="ImpairmentAmount" />
+                <ScalarProperty Name="ImpairmentStatus" ColumnName="ImpairmentStatus" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="GrantedDate" ColumnName="GrantedDate" />
+                <ScalarProperty Name="InterestOSLKR" ColumnName="InterestOSLKR" />
+                <ScalarProperty Name="CapitalLKR" ColumnName="CapitalLKR" />
+                <ScalarProperty Name="GrantedAmountLKR" ColumnName="GrantedAmountLKR" />
+                <ScalarProperty Name="Product" ColumnName="Product" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="AsAtDate" ColumnName="AsAtDate" />
+                <ScalarProperty Name="SolId" ColumnName="SolId" />
+                <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="DataModel.Question">
+              <MappingFragment StoreEntitySet="APP_IFRS_QUESTIONS">
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="AsAtDate" ColumnName="AsAtDate" />
+                <ScalarProperty Name="BI_Type" ColumnName="BI_Type" />
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="DefaultDatabaseSchema" Value="APP" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

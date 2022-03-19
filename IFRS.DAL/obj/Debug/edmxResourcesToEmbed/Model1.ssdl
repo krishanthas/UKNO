@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="18.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="APP_IFRS_ACCOUNTS">
+    <Key>
+      <PropertyRef Name="AccountNumber" />
+    </Key>
+    <Property Name="AccountNumber" Type="varchar2" MaxLength="128" Nullable="false" />
+    <Property Name="SolId" Type="varchar2" MaxLength="128" />
+    <Property Name="AsAtDate" Type="date" />
+    <Property Name="Name" Type="varchar2" MaxLength="128" />
+    <Property Name="Product" Type="varchar2" MaxLength="128" />
+    <Property Name="GrantedAmountLKR" Type="number" Precision="18" Scale="4" />
+    <Property Name="CapitalLKR" Type="number" Precision="18" Scale="4" />
+    <Property Name="InterestOSLKR" Type="number" Precision="18" Scale="4" />
+    <Property Name="GrantedDate" Type="date" />
+    <Property Name="Currency" Type="varchar2" MaxLength="128" />
+    <Property Name="ImpairmentStatus" Type="varchar2" MaxLength="128" />
+    <Property Name="ImpairmentAmount" Type="number" Precision="18" Scale="4" />
+    <Property Name="PresentValue" Type="number" Precision="18" Scale="4" />
+    <Property Name="Classification" Type="varchar2" MaxLength="128" />
+    <Property Name="Period" Type="number" Precision="38" Scale="0" />
+    <Property Name="AmortizedAmount" Type="number" Precision="18" Scale="4" />
+    <Property Name="InterestRate" Type="number" Precision="18" Scale="4" />
+    <Property Name="AppliedInterestRate" Type="number" Precision="18" Scale="4" />
+    <Property Name="TotalCashFlowAmount" Type="number" Precision="18" Scale="4" />
+    <Property Name="DelFlag" Type="varchar2" MaxLength="128" />
+    <Property Name="CustomerId" Type="varchar2" MaxLength="128" />
+    <Property Name="FreeText_1" Type="varchar2" MaxLength="200" />
+    <Property Name="FreeText_2" Type="varchar2" MaxLength="200" />
+    <Property Name="FreeText_3" Type="varchar2" MaxLength="200" />
+    <Property Name="FreeDate_1" Type="date" />
+    <Property Name="FreeDate_2" Type="date" />
+    <Property Name="FreeNo_1" Type="number" Precision="38" Scale="0" />
+    <Property Name="FreeNo_2" Type="number" Precision="38" Scale="0" />
+    <Property Name="RcReUser" Type="varchar2" MaxLength="50" />
+    <Property Name="RcReTime" Type="timestamp" Precision="6" />
+    <Property Name="LchgUser" Type="varchar2" MaxLength="50" />
+    <Property Name="LchgTime" Type="timestamp" Precision="6" />
+    <Property Name="Currency_Rate" Type="number" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="APP_IFRS_CASHFLOWS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="CustomerId" Type="varchar2" MaxLength="128" />
+    <Property Name="AccountNumber" Type="varchar2" MaxLength="128" />
+    <Property Name="SolId" Type="varchar2" MaxLength="128" />
+    <Property Name="AccountName" Type="varchar2" MaxLength="128" />
+    <Property Name="InterestRate" Type="number" Precision="18" Scale="4" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Amount" Type="number" Precision="18" Scale="4" />
+    <Property Name="PresentValue" Type="number" Precision="18" Scale="4" />
+    <Property Name="Status" Type="varchar2" MaxLength="128" />
+    <Property Name="EntryUserId" Type="varchar2" MaxLength="128" />
+    <Property Name="EntryTime" Type="date" />
+    <Property Name="AsAtDate" Type="date" />
+    <Property Name="DelFlag" Type="varchar2" MaxLength="128" />
+    <Property Name="RcReUser" Type="varchar2" MaxLength="50" />
+    <Property Name="RcReTime" Type="timestamp" Precision="6" />
+    <Property Name="LchgUser" Type="varchar2" MaxLength="50" />
+    <Property Name="LchgTime" Type="timestamp" Precision="6" />
+    <Property Name="FreeText_1" Type="varchar2" MaxLength="200" />
+    <Property Name="FreeText_2" Type="varchar2" MaxLength="200" />
+    <Property Name="FreeText_3" Type="varchar2" MaxLength="200" />
+    <Property Name="FreeDate_1" Type="date" />
+    <Property Name="FreeDate_2" Type="date" />
+    <Property Name="FreeNo_1" Type="number" Precision="38" Scale="0" />
+    <Property Name="FreeNo_2" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="APP_IFRS_CUSTOMERS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar2" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="varchar2" MaxLength="128" />
+    <Property Name="BranchId" Type="varchar2" MaxLength="128" />
+    <Property Name="BranchCode" Type="varchar2" MaxLength="128" />
+    <Property Name="BrancType" Type="varchar2" MaxLength="128" />
+    <Property Name="CapitalOSLKR" Type="number" Precision="18" Scale="4" />
+    <Property Name="StatusCode" Type="varchar2" MaxLength="128" />
+    <Property Name="TotalPresentValue" Type="number" Precision="18" Scale="4" />
+    <Property Name="TotalAmortizedAmount" Type="number" Precision="18" Scale="4" />
+    <Property Name="TotalCashFlowsAmount" Type="number" Precision="18" Scale="4" />
+    <Property Name="TotalImpairmentAmount" Type="number" Precision="18" Scale="4" />
+    <Property Name="ImpairmentStatus" Type="varchar2" MaxLength="128" />
+    <Property Name="EntryUserId" Type="varchar2" MaxLength="128" />
+    <Property Name="AsAtDate" Type="date" />
+    <Property Name="DelFlag" Type="varchar2" MaxLength="128" />
+    <Property Name="RelationshipManager" Type="varchar2" MaxLength="128" />
+    <Property Name="Verify_1" Type="varchar2" MaxLength="128" />
+    <Property Name="Verify_2" Type="varchar2" MaxLength="128" />
+    <Property Name="Verify_3" Type="varchar2" MaxLength="128" />
+    <Property Name="Verify_4" Type="varchar2" MaxLength="128" />
+    <Property Name="q1" Type="varchar2" MaxLength="128" />
+    <Property Name="q2" Type="varchar2" MaxLength="128" />
+    <Property Name="q3" Type="varchar2" MaxLength="128" />
+    <Property Name="q4" Type="varchar2" MaxLength="128" />
+    <Property Name="q5" Type="varchar2" MaxLength="128" />
+    <Property Name="q6" Type="varchar2" MaxLength="128" />
+    <Property Name="q7" Type="varchar2" MaxLength="128" />
+    <Property Name="q8" Type="varchar2" MaxLength="128" />
+    <Property Name="q9" Type="varchar2" MaxLength="128" />
+    <Property Name="q10" Type="varchar2" MaxLength="128" />
+    <Property Name="q11" Type="varchar2" MaxLength="128" />
+    <Property Name="q12" Type="varchar2" MaxLength="128" />
+    <Property Name="q13" Type="varchar2" MaxLength="128" />
+    <Property Name="q14" Type="varchar2" MaxLength="128" />
+    <Property Name="q15" Type="varchar2" MaxLength="128" />
+    <Property Name="q16" Type="varchar2" MaxLength="128" />
+    <Property Name="q17" Type="varchar2" MaxLength="128" />
+    <Property Name="q18" Type="varchar2" MaxLength="128" />
+    <Property Name="q19" Type="varchar2" MaxLength="128" />
+    <Property Name="q20" Type="varchar2" MaxLength="128" />
+    <Property Name="q21" Type="varchar2" MaxLength="128" />
+    <Property Name="q22" Type="varchar2" MaxLength="128" />
+    <Property Name="q23" Type="varchar2" MaxLength="128" />
+    <Property Name="q24" Type="varchar2" MaxLength="128" />
+    <Property Name="q25" Type="varchar2" MaxLength="128" />
+    <Property Name="q26" Type="varchar2" MaxLength="128" />
+    <Property Name="q27" Type="varchar2" MaxLength="128" />
+    <Property Name="q28" Type="varchar2" MaxLength="128" />
+    <Property Name="q29" Type="varchar2" MaxLength="128" />
+    <Property Name="q30" Type="varchar2" MaxLength="128" />
+    <Property Name="StatusHistory" Type="varchar2" MaxLength="2048" />
+    <Property Name="RcReUser" Type="varchar2" MaxLength="50" />
+    <Property Name="RcReTime" Type="timestamp" Precision="6" />
+    <Property Name="LchgUser" Type="varchar2" MaxLength="50" />
+    <Property Name="LchgTime" Type="timestamp" Precision="6" />
+    <Property Name="VerifiedUser" Type="varchar2" MaxLength="50" />
+    <Property Name="VerifiedTime" Type="timestamp" Precision="6" />
+    <Property Name="FreeText_1" Type="varchar2" MaxLength="200" />
+    <Property Name="FreeText_2" Type="varchar2" MaxLength="200" />
+    <Property Name="FreeText_3" Type="varchar2" MaxLength="200" />
+    <Property Name="FreeDate_1" Type="date" />
+    <Property Name="FreeDate_2" Type="date" />
+    <Property Name="FreeNo_1" Type="number" Precision="38" Scale="0" />
+    <Property Name="FreeNo_2" Type="number" Precision="38" Scale="0" />
+    <Property Name="Npa_Pa" Type="varchar2" MaxLength="3" />
+    <Property Name="Mora_Status" Type="varchar2" MaxLength="3" />
+    <Property Name="Customer_Type" Type="varchar2" MaxLength="2" />
+    <Property Name="AnswerRemark" Type="varchar2" MaxLength="4000" />
+  </EntityType>
+  <EntityType Name="APP_IFRS_QUESTIONS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="Status" Type="varchar2" MaxLength="128" />
+    <Property Name="Text" Type="varchar2" MaxLength="1024" />
+    <Property Name="Answer" Type="varchar2" MaxLength="128" />
+    <Property Name="BI_Type" Type="varchar2" MaxLength="2" />
+    <Property Name="AsAtDate" Type="date" />
+    <Property Name="No" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="APP_IFRS_REMARKS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="AsAtDate" Type="date" />
+    <Property Name="CustomerId" Type="varchar2" MaxLength="128" />
+    <Property Name="Remarks" Type="varchar2" MaxLength="4000" />
+    <Property Name="DelFlag" Type="varchar2" MaxLength="128" />
+    <Property Name="RcReUser" Type="varchar2" MaxLength="50" />
+    <Property Name="RcReTime" Type="timestamp" Precision="6" />
+    <Property Name="LchgUser" Type="varchar2" MaxLength="50" />
+    <Property Name="LchgTime" Type="timestamp" Precision="6" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'APP.APP_IFRS_USERS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="APP_IFRS_USERS">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar2" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="varchar2" MaxLength="128" />
+    <Property Name="NameWithInitials" Type="varchar2" MaxLength="128" />
+    <Property Name="DepartmentId" Type="varchar2" MaxLength="128" />
+    <Property Name="DepartmentName" Type="varchar2" MaxLength="128" />
+    <Property Name="Email" Type="varchar2" MaxLength="128" />
+    <Property Name="ReportingId" Type="varchar2" MaxLength="128" />
+  </EntityType>
+  <EntityContainer Name="DataModelStoreContainer">
+    <EntitySet Name="APP_IFRS_ACCOUNTS" EntityType="Self.APP_IFRS_ACCOUNTS" Schema="APP" store:Type="Tables" />
+    <EntitySet Name="APP_IFRS_CASHFLOWS" EntityType="Self.APP_IFRS_CASHFLOWS" Schema="APP" store:Type="Tables" />
+    <EntitySet Name="APP_IFRS_CUSTOMERS" EntityType="Self.APP_IFRS_CUSTOMERS" Schema="APP" store:Type="Tables" />
+    <EntitySet Name="APP_IFRS_QUESTIONS" EntityType="Self.APP_IFRS_QUESTIONS" Schema="APP" store:Type="Tables" />
+    <EntitySet Name="APP_IFRS_REMARKS" EntityType="Self.APP_IFRS_REMARKS" Schema="APP" store:Type="Tables" />
+    <EntitySet Name="APP_IFRS_USERS" EntityType="Self.APP_IFRS_USERS" store:Type="Tables" store:Schema="APP">
+      <DefiningQuery>SELECT 
+"APP_IFRS_USERS"."Id" AS "Id", 
+"APP_IFRS_USERS"."Name" AS "Name", 
+"APP_IFRS_USERS"."NameWithInitials" AS "NameWithInitials", 
+"APP_IFRS_USERS"."DepartmentId" AS "DepartmentId", 
+"APP_IFRS_USERS"."DepartmentName" AS "DepartmentName", 
+"APP_IFRS_USERS"."Email" AS "Email", 
+"APP_IFRS_USERS"."ReportingId" AS "ReportingId"
+FROM "APP"."APP_IFRS_USERS" "APP_IFRS_USERS"</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

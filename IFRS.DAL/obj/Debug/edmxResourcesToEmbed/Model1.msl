@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="CashFlows">
+      <EntityTypeMapping TypeName="DataModel.CashFlow">
+        <MappingFragment StoreEntitySet="APP_IFRS_CASHFLOWS">
+          <ScalarProperty Name="LchgTime" ColumnName="LchgTime" />
+          <ScalarProperty Name="LchgUser" ColumnName="LchgUser" />
+          <ScalarProperty Name="RcReTime" ColumnName="RcReTime" />
+          <ScalarProperty Name="RcReUser" ColumnName="RcReUser" />
+          <ScalarProperty Name="FreeNo_2" ColumnName="FreeNo_2" />
+          <ScalarProperty Name="FreeNo_1" ColumnName="FreeNo_1" />
+          <ScalarProperty Name="FreeDate_2" ColumnName="FreeDate_2" />
+          <ScalarProperty Name="FreeDate_1" ColumnName="FreeDate_1" />
+          <ScalarProperty Name="FreeText_3" ColumnName="FreeText_3" />
+          <ScalarProperty Name="FreeText_2" ColumnName="FreeText_2" />
+          <ScalarProperty Name="FreeText_1" ColumnName="FreeText_1" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="AsAtDate" ColumnName="AsAtDate" />
+          <ScalarProperty Name="EntryTime" ColumnName="EntryTime" />
+          <ScalarProperty Name="EntryUserId" ColumnName="EntryUserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PresentValue" ColumnName="PresentValue" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="SolId" ColumnName="SolId" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="DataModel.Customer">
+        <MappingFragment StoreEntitySet="APP_IFRS_CUSTOMERS">
+          <ScalarProperty Name="AnswerRemark" ColumnName="AnswerRemark" />
+          <ScalarProperty Name="Customer_Type" ColumnName="Customer_Type" />
+          <ScalarProperty Name="Mora_Status" ColumnName="Mora_Status" />
+          <ScalarProperty Name="Npa_Pa" ColumnName="Npa_Pa" />
+          <ScalarProperty Name="LchgTime" ColumnName="LchgTime" />
+          <ScalarProperty Name="LchgUser" ColumnName="LchgUser" />
+          <ScalarProperty Name="VerifiedTime" ColumnName="VerifiedTime" />
+          <ScalarProperty Name="VerifiedUser" ColumnName="VerifiedUser" />
+          <ScalarProperty Name="RcReTime" ColumnName="RcReTime" />
+          <ScalarProperty Name="RcReUser" ColumnName="RcReUser" />
+          <ScalarProperty Name="FreeNo_2" ColumnName="FreeNo_2" />
+          <ScalarProperty Name="FreeNo_1" ColumnName="FreeNo_1" />
+          <ScalarProperty Name="FreeDate_2" ColumnName="FreeDate_2" />
+          <ScalarProperty Name="FreeDate_1" ColumnName="FreeDate_1" />
+          <ScalarProperty Name="FreeText_3" ColumnName="FreeText_3" />
+          <ScalarProperty Name="FreeText_2" ColumnName="FreeText_2" />
+          <ScalarProperty Name="FreeText_1" ColumnName="FreeText_1" />
+          <ScalarProperty Name="StatusHistory" ColumnName="StatusHistory" />
+          <ScalarProperty Name="q30" ColumnName="q30" />
+          <ScalarProperty Name="q29" ColumnName="q29" />
+          <ScalarProperty Name="q28" ColumnName="q28" />
+          <ScalarProperty Name="q27" ColumnName="q27" />
+          <ScalarProperty Name="q26" ColumnName="q26" />
+          <ScalarProperty Name="q25" ColumnName="q25" />
+          <ScalarProperty Name="q24" ColumnName="q24" />
+          <ScalarProperty Name="q23" ColumnName="q23" />
+          <ScalarProperty Name="q22" ColumnName="q22" />
+          <ScalarProperty Name="q21" ColumnName="q21" />
+          <ScalarProperty Name="q20" ColumnName="q20" />
+          <ScalarProperty Name="q19" ColumnName="q19" />
+          <ScalarProperty Name="q18" ColumnName="q18" />
+          <ScalarProperty Name="q17" ColumnName="q17" />
+          <ScalarProperty Name="q16" ColumnName="q16" />
+          <ScalarProperty Name="q15" ColumnName="q15" />
+          <ScalarProperty Name="q14" ColumnName="q14" />
+          <ScalarProperty Name="q13" ColumnName="q13" />
+          <ScalarProperty Name="q12" ColumnName="q12" />
+          <ScalarProperty Name="q11" ColumnName="q11" />
+          <ScalarProperty Name="q10" ColumnName="q10" />
+          <ScalarProperty Name="q9" ColumnName="q9" />
+          <ScalarProperty Name="q8" ColumnName="q8" />
+          <ScalarProperty Name="q7" ColumnName="q7" />
+          <ScalarProperty Name="q6" ColumnName="q6" />
+          <ScalarProperty Name="q5" ColumnName="q5" />
+          <ScalarProperty Name="q4" ColumnName="q4" />
+          <ScalarProperty Name="q3" ColumnName="q3" />
+          <ScalarProperty Name="q2" ColumnName="q2" />
+          <ScalarProperty Name="q1" ColumnName="q1" />
+          <ScalarProperty Name="Verify_4" ColumnName="Verify_4" />
+          <ScalarProperty Name="Verify_3" ColumnName="Verify_3" />
+          <ScalarProperty Name="Verify_2" ColumnName="Verify_2" />
+          <ScalarProperty Name="Verify_1" ColumnName="Verify_1" />
+          <ScalarProperty Name="RelationshipManager" ColumnName="RelationshipManager" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="AsAtDate" ColumnName="AsAtDate" />
+          <ScalarProperty Name="EntryUserId" ColumnName="EntryUserId" />
+          <ScalarProperty Name="ImpairmentStatus" ColumnName="ImpairmentStatus" />
+          <ScalarProperty Name="TotalImpairmentAmount" ColumnName="TotalImpairmentAmount" />
+          <ScalarProperty Name="TotalCashFlowsAmount" ColumnName="TotalCashFlowsAmount" />
+          <ScalarProperty Name="TotalAmortizedAmount" ColumnName="TotalAmortizedAmount" />
+          <ScalarProperty Name="TotalPresentValue" ColumnName="TotalPresentValue" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="CapitalOSLKR" ColumnName="CapitalOSLKR" />
+          <ScalarProperty Name="BrancType" ColumnName="BrancType" />
+          <ScalarProperty Name="BranchCode" ColumnName="BranchCode" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DataModel.User">
+        <MappingFragment StoreEntitySet="APP_IFRS_USERS">
+          <ScalarProperty Name="ReportingId" ColumnName="ReportingId" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="NameWithInitials" ColumnName="NameWithInitials" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Remarks">
+      <EntityTypeMapping TypeName="DataModel.Remark">
+        <MappingFragment StoreEntitySet="APP_IFRS_REMARKS">
+          <ScalarProperty Name="LchgTime" ColumnName="LchgTime" />
+          <ScalarProperty Name="LchgUser" ColumnName="LchgUser" />
+          <ScalarProperty Name="RcReTime" ColumnName="RcReTime" />
+          <ScalarProperty Name="RcReUser" ColumnName="RcReUser" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="AsAtDate" ColumnName="AsAtDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="DataModel.Account">
+        <MappingFragment StoreEntitySet="APP_IFRS_ACCOUNTS">
+          <ScalarProperty Name="Currency_Rate" ColumnName="Currency_Rate" />
+          <ScalarProperty Name="LchgTime" ColumnName="LchgTime" />
+          <ScalarProperty Name="LchgUser" ColumnName="LchgUser" />
+          <ScalarProperty Name="RcReTime" ColumnName="RcReTime" />
+          <ScalarProperty Name="RcReUser" ColumnName="RcReUser" />
+          <ScalarProperty Name="FreeNo_2" ColumnName="FreeNo_2" />
+          <ScalarProperty Name="FreeNo_1" ColumnName="FreeNo_1" />
+          <ScalarProperty Name="FreeDate_2" ColumnName="FreeDate_2" />
+          <ScalarProperty Name="FreeDate_1" ColumnName="FreeDate_1" />
+          <ScalarProperty Name="FreeText_3" ColumnName="FreeText_3" />
+          <ScalarProperty Name="FreeText_2" ColumnName="FreeText_2" />
+          <ScalarProperty Name="FreeText_1" ColumnName="FreeText_1" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="TotalCashFlowAmount" ColumnName="TotalCashFlowAmount" />
+          <ScalarProperty Name="AppliedInterestRate" ColumnName="AppliedInterestRate" />
+          <ScalarProperty Name="InterestRate" ColumnName="InterestRate" />
+          <ScalarProperty Name="AmortizedAmount" ColumnName="AmortizedAmount" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="Classification" ColumnName="Classification" />
+          <ScalarProperty Name="PresentValue" ColumnName="PresentValue" />
+          <ScalarProperty Name="ImpairmentAmount" ColumnName="ImpairmentAmount" />
+          <ScalarProperty Name="ImpairmentStatus" ColumnName="ImpairmentStatus" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="GrantedDate" ColumnName="GrantedDate" />
+          <ScalarProperty Name="InterestOSLKR" ColumnName="InterestOSLKR" />
+          <ScalarProperty Name="CapitalLKR" ColumnName="CapitalLKR" />
+          <ScalarProperty Name="GrantedAmountLKR" ColumnName="GrantedAmountLKR" />
+          <ScalarProperty Name="Product" ColumnName="Product" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="AsAtDate" ColumnName="AsAtDate" />
+          <ScalarProperty Name="SolId" ColumnName="SolId" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="DataModel.Question">
+        <MappingFragment StoreEntitySet="APP_IFRS_QUESTIONS">
+          <ScalarProperty Name="No" ColumnName="No" />
+          <ScalarProperty Name="AsAtDate" ColumnName="AsAtDate" />
+          <ScalarProperty Name="BI_Type" ColumnName="BI_Type" />
+          <ScalarProperty Name="Answer" ColumnName="Answer" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

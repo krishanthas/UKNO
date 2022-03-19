@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="HomeMasterPage.master.cs" Inherits="IFRS.WEB.Views.Masters.HomeMasterPage" %>
+
+<%--<%@ MasterType  TypeName="SiteMaster" virtualPath="~/Site.master"%>--%>
+<%--<%@ Register TagPrefix="mp" TagName="MyMP" Src="~/Site.Master" %>--%>
+<%--<%@ MasterType  virtualPath="~/Site.master"%>--%>
+<%@ MasterType TypeName="IFRS.WEB.SiteMaster" %>
+
+<asp:Content ID="ContentHeader" ContentPlaceHolderID="MainContent" runat="server">
+    <div>
+
+        <%--<%= ((IFRS.WEB.SiteMaster)Master).Skin %>--%>
+        <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
+        <telerik:RadPageLayout ID="RadPageLayoutHomeHeader" runat="server" Skin='<%#this.Skin%>'>
+            <Rows>
+                <telerik:LayoutRow RowType="Generic">
+                    <Columns>
+                        <telerik:LayoutColumn CssClass="home-header">
+                            <telerik:RadLabel runat="server">Sri Lanka Financial Reporting Standards (SLFRS)</telerik:RadLabel>
+                        </telerik:LayoutColumn>
+                    </Columns>
+                </telerik:LayoutRow>
+                <telerik:LayoutRow RowType="Container" WrapperHtmlTag="Div" CssClass="home-sub-title-bar">
+                    <Columns>
+                        <telerik:LayoutColumn Span="3" SpanSm="6" SpanXs="12">
+                            <telerik:RadLabel runat="server" ID="RadLabel1" AssociatedControlID="RadTextBox1" Text="User Id"></telerik:RadLabel>
+                            <telerik:RadLabel runat="server" ID="LabelUserId" AssociatedControlID="RadTextBox1" Text=""></telerik:RadLabel>
+                        </telerik:LayoutColumn>
+                        <telerik:LayoutColumn Span="3" SpanSm="6" SpanXs="12">
+                            <telerik:RadLabel runat="server" ID="RadLabel2" AssociatedControlID="RadTextBox1" Text="Username"></telerik:RadLabel>
+                            <telerik:RadLabel runat="server" ID="LabelUsername" AssociatedControlID="RadTextBox1" Text=""></telerik:RadLabel>
+                        </telerik:LayoutColumn>
+                        <telerik:LayoutColumn Span="3" SpanSm="6" SpanXs="12">
+                            <telerik:RadLabel runat="server" ID="LabelAsAtDateTitle" AssociatedControlID="RadTextBox1" Text=""></telerik:RadLabel>
+                            <telerik:RadLabel runat="server" ID="LabelAsAtDate" AssociatedControlID="RadTextBox1" Text=""></telerik:RadLabel>
+                        </telerik:LayoutColumn>
+                        <telerik:LayoutColumn Span="3" SpanSm="6" SpanXs="12">
+                            <telerik:RadLabel runat="server" ID="RadLabel4" AssociatedControlID="RadTextBox1" Text="Branch Name"></telerik:RadLabel>
+                            <telerik:RadLabel runat="server" ID="LabelBranchName" AssociatedControlID="RadTextBox1" Text=""></telerik:RadLabel>
+                        </telerik:LayoutColumn>
+                    </Columns>
+                </telerik:LayoutRow>
+            </Rows>
+            <Rows>
+                <telerik:LayoutRow RowType="Generic">
+                    <Columns>
+                        <telerik:LayoutColumn CssClass="home-instruction" Style="padding-top: 3px;">
+                            <telerik:RadButton ID="ButtonBack" runat="server" Text="Back" OnClick="ButtonBack_OnClick" Style="float: left;margin-left: 10px;margin-right: 10px;" SingleClick="true" SingleClickText="Processing..." UseSubmitBehavior="false" ></telerik:RadButton>
+                            <telerik:RadButton ID="ButtonHome" runat="server" Text="Home" OnClick="ButtonHome_OnClick" Style="float: left;margin-left: 10px;margin-right: 10px;" SingleClick="true" SingleClickText="Processing..." UseSubmitBehavior="false" ></telerik:RadButton>
+                            <telerik:RadButton ID="ButtonReports" runat="server" Text="Reports" OnClick="ButtonReports_OnClick" Style="float: left;margin-left: 10px;margin-right: 10px;"  SingleClick="true" SingleClickText="Processing..." UseSubmitBehavior="false" ></telerik:RadButton>
+                            <telerik:RadButton ID="ButtonAdmin" runat="server" Text="Admin" OnClick="ButtonAdmin_Click" Style="float: left;margin-left: 10px;margin-right: 10px;"  SingleClick="true" SingleClickText="Processing..." UseSubmitBehavior="false" ></telerik:RadButton>
+                            <telerik:RadButton ID="ButtonLogout" runat="server" Text="Logout" Style="float: right;" OnClick="ButtonLogout_OnClick" SingleClick="true" SingleClickText="Processing..." UseSubmitBehavior="false" ></telerik:RadButton>
+                        </telerik:LayoutColumn>
+                        <telerik:LayoutColumn CssClass="home-instruction">
+                            <telerik:RadLabel ID="LabelInstruction" runat="server"></telerik:RadLabel>
+                        </telerik:LayoutColumn>
+                    </Columns>
+                </telerik:LayoutRow>
+            </Rows>
+        </telerik:RadPageLayout>
+    </div>
+    <asp:ContentPlaceHolder ID="HomeMasterContent" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+

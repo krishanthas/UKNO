@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CashFlows" EntityType="DataModel.CashFlow" />
+    <EntitySet Name="Customers" EntityType="DataModel.Customer" />
+    <EntitySet Name="Users" EntityType="DataModel.User" />
+    <EntitySet Name="Remarks" EntityType="DataModel.Remark" />
+    <EntitySet Name="Accounts" EntityType="DataModel.Account" />
+    <EntitySet Name="Questions" EntityType="DataModel.Question" />
+  </EntityContainer>
+  <EntityType Name="CashFlow">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="CustomerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="AccountNumber" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="SolId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="AccountName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="InterestRate" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Date" Type="DateTime" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PresentValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Status" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="EntryTime" Type="DateTime" />
+    <Property Name="AsAtDate" Type="DateTime" />
+    <Property Name="DelFlag" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="FreeText_1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="FreeText_2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="FreeText_3" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="FreeDate_1" Type="DateTime" />
+    <Property Name="FreeDate_2" Type="DateTime" />
+    <Property Name="FreeNo_1" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="FreeNo_2" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="RcReUser" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="RcReTime" Type="DateTime" Precision="6" />
+    <Property Name="LchgUser" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LchgTime" Type="DateTime" Precision="6" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="BranchId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="BranchCode" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="BrancType" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="CapitalOSLKR" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="StatusCode" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="TotalPresentValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="TotalAmortizedAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="TotalCashFlowsAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="TotalImpairmentAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="ImpairmentStatus" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="EntryUserId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="AsAtDate" Type="DateTime" />
+    <Property Name="DelFlag" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="RelationshipManager" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Verify_1" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Verify_2" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Verify_3" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Verify_4" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q1" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q2" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q3" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q4" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q5" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q6" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q7" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q8" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q9" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q10" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q11" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q12" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q13" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q14" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q15" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q16" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q17" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q18" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q19" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q20" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q21" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q22" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q23" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q24" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q25" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q26" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q27" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q28" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q29" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="q30" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="StatusHistory" Type="String" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Name="FreeText_1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="FreeText_2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="FreeText_3" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+    <Property Name="FreeDate_1" Type="DateTime" />
+    <Property Name="FreeDate_2" Type="DateTime" />
+    <Property Name="FreeNo_1" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="FreeNo_2" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="RcReUser" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="RcReTime" Type="DateTime" Precision="6" />
+    <Property Name="VerifiedUser" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="VerifiedTime" Type="DateTime" Precision="6" />
+    <Property Name="LchgUser" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="LchgTime" Type="DateTime" Precision="6" />
+    <Property Name="Npa_Pa" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Mora_Status" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_Type" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="AnswerRemark" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="NameWithInitials" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="DepartmentName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="ReportingId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Remark">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="AsAtDate" Type="DateTime" />
+    <Property Name="CustomerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Remarks" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+    <Property Name="DelFlag" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="RcReUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RcReTime" Type="DateTime" Precision="6" />
+    <Property Name="LchgUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LchgTime" Type="DateTime" Precision="6" />
+  </EntityType>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="AccountNumber" />
+    </Key>
+    <Property Name="AccountNumber" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="SolId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="AsAtDate" Type="DateTime" />
+    <Property Name="Name" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Product" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="GrantedAmountLKR" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="CapitalLKR" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestOSLKR" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="GrantedDate" Type="DateTime" />
+    <Property Name="Currency" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="ImpairmentStatus" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="ImpairmentAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="PresentValue" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="Classification" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Period" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="AmortizedAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="InterestRate" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="AppliedInterestRate" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="TotalCashFlowAmount" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="DelFlag" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="FreeText_1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FreeText_2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FreeText_3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="FreeDate_1" Type="DateTime" />
+    <Property Name="FreeDate_2" Type="DateTime" />
+    <Property Name="FreeNo_1" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="FreeNo_2" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="RcReUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="RcReTime" Type="DateTime" Precision="6" />
+    <Property Name="LchgUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LchgTime" Type="DateTime" Precision="6" />
+    <Property Name="Currency_Rate" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="Status" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="Text" Type="String" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Name="Answer" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="BI_Type" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="AsAtDate" Type="DateTime" />
+    <Property Name="No" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+  </EntityType>
+</Schema>

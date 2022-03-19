@@ -1,0 +1,5 @@
+C:\IFRS\Safe\ifsr\ifsr\IFRS.DEM\bin\Debug\IFRS.DEM.dll
+C:\IFRS\Safe\ifsr\ifsr\IFRS.DEM\bin\Debug\IFRS.DEM.pdb
+C:\IFRS\Safe\ifsr\ifsr\IFRS.DEM\obj\Debug\IFRS.DEM.csproj.CoreCompileInputs.cache
+C:\IFRS\Safe\ifsr\ifsr\IFRS.DEM\obj\Debug\IFRS.DEM.dll
+C:\IFRS\Safe\ifsr\ifsr\IFRS.DEM\obj\Debug\IFRS.DEM.pdb
