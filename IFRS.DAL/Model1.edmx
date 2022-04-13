@@ -187,12 +187,12 @@ warning 6002: The table/view 'APP.APP_IFRS_USERS' does not have a primary key de
           <Property Name="ReportingId" Type="varchar2" MaxLength="128" />
         </EntityType>
         <EntityContainer Name="DataModelStoreContainer">
-          <EntitySet Name="APP_IFRS_ACCOUNTS" EntityType="Self.APP_IFRS_ACCOUNTS" Schema="APP" store:Type="Tables" />
-          <EntitySet Name="APP_IFRS_CASHFLOWS" EntityType="Self.APP_IFRS_CASHFLOWS" Schema="APP" store:Type="Tables" />
-          <EntitySet Name="APP_IFRS_CUSTOMERS" EntityType="Self.APP_IFRS_CUSTOMERS" Schema="APP" store:Type="Tables" />
-          <EntitySet Name="APP_IFRS_QUESTIONS" EntityType="Self.APP_IFRS_QUESTIONS" Schema="APP" store:Type="Tables" />
-          <EntitySet Name="APP_IFRS_REMARKS" EntityType="Self.APP_IFRS_REMARKS" Schema="APP" store:Type="Tables" />
-          <EntitySet Name="APP_IFRS_USERS" EntityType="Self.APP_IFRS_USERS" store:Type="Tables" store:Schema="APP">
+          <EntitySet Name="APP_IFRS_ACCOUNTS" EntityType="Self.APP_IFRS_ACCOUNTS"  store:Type="Tables" />
+          <EntitySet Name="APP_IFRS_CASHFLOWS" EntityType="Self.APP_IFRS_CASHFLOWS" store:Type="Tables" />
+          <EntitySet Name="APP_IFRS_CUSTOMERS" EntityType="Self.APP_IFRS_CUSTOMERS" store:Type="Tables" />
+          <EntitySet Name="APP_IFRS_QUESTIONS" EntityType="Self.APP_IFRS_QUESTIONS" store:Type="Tables" />
+          <EntitySet Name="APP_IFRS_REMARKS" EntityType="Self.APP_IFRS_REMARKS" store:Type="Tables" />
+          <EntitySet Name="APP_IFRS_USERS" EntityType="Self.APP_IFRS_USERS" store:Type="Tables" >
             <DefiningQuery>SELECT 
 "APP_IFRS_USERS"."Id" AS "Id", 
 "APP_IFRS_USERS"."Name" AS "Name", 

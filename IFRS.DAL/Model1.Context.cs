@@ -18,6 +18,7 @@ namespace IFRS.DAL
         public Entities()
             : base("name=Entities")
         {
+            this.Database.Connection.ConnectionString = "Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=192.168.41.232)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=Pawning)));User Id=oraclet2;Password=oracle123;";
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

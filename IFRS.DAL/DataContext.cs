@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -177,23 +178,48 @@ namespace IFRS.DAL {
             }
         }
 
-        public static User GetUserById(string id) {
-            using (var context = new Entities()) {
+        //public static User GetUserById(string id) {
+        //    using (var context = new Entities()) {
 
+        //        try
+        //        {
+        //            var user = context.Users.FirstOrDefault(i => i.Id.Equals(id));
+
+        //            return user;
+        //        }
+        //        catch(Exception ex)
+        //        {
+        //            return null;
+        //        }
+        //    }
+
+        //}
+
+        public static User GetUserById(string id)
+        {
+            using (var context = new Entities())
+            {
                 try
                 {
-                    var user = context.Users.FirstOrDefault(i => i.Id.Equals(id));
-
-                    return user;
+                    var cmd = context.Database.Connection.CreateCommand();
+                    cmd.CommandText = string.Format(@"SELECT * FROM app_ifrs_users where ""Id"" = '{0}'", id);
+                    context.Database.Connection.Open();
+                    var reader = cmd.ExecuteReader();
+                    return (context as IObjectContextAdapter).ObjectContext.Translate<User>(reader).FirstOrDefault();
+                    //var user = context.Users.FirstOrDefault(i => i.Id.Equals(id));
+                    //return null;
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     return null;
                 }
+                finally
+                {
+                    context.Database.Connection.Close();
+                }
             }
-
         }
-            
+
         public static UserRole GetUserRoleById(string userId, string solId) {
             var ret = UserRole.UNAUTHORIZED;
             using (var context = new Entities()) {
